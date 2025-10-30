@@ -18,7 +18,7 @@ public class Main {
         GroomingService g4 = new GroomingService("GROOM-004", p4.getName(), "Cepillado y Uñas", 30000.0, 60);
         GroomingService g5 = new GroomingService("GROOM-005", p5.getName(), "Baño Rápido", 35000.0, 75); //
 
-        // --- 2. LLAMADA A TODOS LOS MÉTODOS DE AMBAS CLASES (DEMOSTRACIÓN) ---
+        
 
         System.out.println("--- PET ---\n");
 
