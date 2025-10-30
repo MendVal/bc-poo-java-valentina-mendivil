@@ -46,5 +46,11 @@ public class GroomingService {
     }
 }
 /*
-Clase principal (Objeto Principal) del dominio Peluquería Canina.
+FIN DE LA CLASE
+
+La clase GroomingService modela un servicio real de 
+peluquería canina. Agrupa atributos (código, mascota,
+tipo, precio y duración) junto con su comportamiento 
+(mostrar información, calcular costo final y registrar 
+estado de pago)
 */
