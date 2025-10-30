@@ -1,6 +1,6 @@
 public class GroomingService {
 
-    // ATRIBUTOS (5+ requeridos: String, double, int, boolean)
+    // ATRIBUTOS 
     private String serviceCode;     // Código único del servicio (String).
     private String petName;         // Nombre de la mascota (String).
     private String serviceType;     // Tipo de servicio (ej: Baño, Corte) (String).
@@ -8,7 +8,7 @@ public class GroomingService {
     private int durationMinutes;    // Duración del servicio en minutos (int).
     private boolean isPaid;         // Estado de pago del servicio (boolean).
 
-    // Constructor (5 argumentos)
+    // Constructor 
     public GroomingService(String serviceCode, String petName, String serviceType, double basePrice, int durationMinutes) {
         this.serviceCode = serviceCode;
         this.petName = petName;
@@ -18,7 +18,7 @@ public class GroomingService {
         this.isPaid = false; // El servicio siempre inicia como pendiente de pago.
     }
 
-    // Método 1: void que imprime información
+    // Método 1: void 
     public void showInfo() {
         System.out.println("=== Servicio Grooming (" + serviceCode + ") ===");
         System.out.println("Mascota: " + petName);
