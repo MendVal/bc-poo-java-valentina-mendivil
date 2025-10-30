@@ -4,7 +4,7 @@ public class Main {
 
         // --- 1. CREACIÓN DE OBJETOS  ---
 
-        // Crear objetos de la Clase Secundaria: Pet (Mascota)
+        // Crear objetos de la Clase Secundaria: Pet 
         Pet p1 = new Pet("Lana", "Poodle", "Valentina M.", 3);
         Pet p2 = new Pet("Princesa", "Pastor Alemán", "Javier R.", 8);
         Pet p3 = new Pet("Mora", "Golden Retriever", "Carlos P.", 5);
