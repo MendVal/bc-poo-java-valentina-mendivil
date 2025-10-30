@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== SISTEMA DE GESTIÓN DE PELUQUERÍA CANINA ===\n");
 
-        // --- 1. CREACIÓN DE OBJETOS (5 de cada clase) ---
+        // --- 1. CREACIÓN DE OBJETOS  ---
 
         // Crear objetos de la Clase Secundaria: Pet (Mascota)
         Pet p1 = new Pet("Lana", "Poodle", "Valentina M.", 3);
@@ -70,6 +70,7 @@ public class Main {
     }
 }
 /*
-Clase Main que garantiza la creación de 5 objetos de cada clase y la llamada a todos
-los métodos.
+FIN DE LA CLASE MAIN
+Esta clase demuestra el uso completo del sistema de
+Peluquería Canina “Mascotas Elegantes”.
 */
