@@ -1,13 +1,13 @@
 public class Pet {
 
-    // ATRIBUTOS (4+ Atributos requeridos)
+    // ATRIBUTOS 
     private String name;            // Nombre de la mascota.
     private String breed;           // Raza de la mascota.
     private String ownerName;       // Nombre del propietario.
     private int ageYears;           // Edad de la mascota en años.
     private boolean requiresSpecialCare; // Indica si tiene necesidades especiales.
 
-    // Constructor (4 argumentos)
+    // Constructor 
     public Pet(String name, String breed, String ownerName, int ageYears) {
         this.name = name;
         this.breed = breed;
@@ -16,12 +16,12 @@ public class Pet {
         this.requiresSpecialCare = false;
     }
 
-    // Método Getter (Necesario para que Main pueda pasar el nombre a GroomingService)
+    // Método Getter 
     public String getName() {
         return name;
     }
 
-    // Método 1: void que imprime información
+    // Método 1: void 
     public void showInfo() {
         System.out.println("--- DATOS MASCOTA ---");
         System.out.println("Nombre: " + name);
@@ -31,7 +31,7 @@ public class Pet {
         System.out.println("Cuidado Especial: " + (requiresSpecialCare ? "SÍ" : "NO"));
     }
 
-    // Método 2: Modifica un estado (lógica de negocio)
+    // Método 2
     public void markSpecialCare(boolean needsCare) {
         this.requiresSpecialCare = needsCare;
         if (needsCare) {
@@ -39,12 +39,13 @@ public class Pet {
         }
     }
 
-    // Método 3: Retorna un valor calculado/estado
+    // Método 3
     public boolean isOldPet() {
         // Retorna true si la mascota tiene 7 años o más.
         return ageYears >= 7;
     }
 }
 /*
+FIN DE LA CLASE PET
 Clase secundaria que modela una Mascota.
 */
