@@ -33,7 +33,7 @@ Mascotas Elegantes es una peluquería especializada en el cuidado estético de p
 
 ---
 
-## Actividad 1 — Identificación de Objetos
+## 1. Identificación de Objetos Principales
 
 Se identifican **5 objetos principales** dentro del dominio.
 
@@ -79,7 +79,34 @@ Se identifican **5 objetos principales** dentro del dominio.
 
 ---
 
-## Actividad 2 — Comparación de Paradigmas
+## 2. Identificación de Dominio
+**Objeto Principal: GroomingService**
+Justificación: Representa la transacción fundamental del negocio. Este objeto encapsula toda la información necesaria para registrar, costear y seguir el estado de un servicio prestado al cliente.
+
+#### Atributos identificados:
+- serviceCode (String)
+- petName (String)
+- serviceType (String)
+- basePrice (double)
+- durationMinutes (int)
+- isPaid (boolean)
+
+#### Comportamientos:
+
+- showInfo() (Método void para impresión).
+- calculateFinalCost() (Método que retorna un valor calculado).
+- getServiceCode() (Método Getter).
+- setIsPaid() (Método Setter).
+
+**Objeto Secundario: Pet**
+
+- Justificación: Es la entidad esencial que recibe la atención. Sus características (edad, nombre, raza) son cruciales para determinar los requisitos de cuidado y el tipo de servicio.
+
+- Relación con objeto principal: Asociación (Usa-A). Un objeto GroomingService está conceptualmente ligado a un Pet. En la implementación, el servicio utiliza el nombre (getName()) de la mascota para completar su propio registro.
+
+
+---
+## 3. Comparación de Paradigmas
 
 
 **Programación estructurada:**
@@ -89,6 +116,27 @@ Se identifican **5 objetos principales** dentro del dominio.
 * Enfocada en lo que se hace (pasos para ejecutar).
 * Es más difícil organizar proyectos grandes.
 
+```java
+// Programación Estructurada: Datos y funciones separados
+
+// DATOS SUELTOS para el servicio GROOM-001
+String codigo = "GROOM-001";
+String mascota = "Lana";
+String tipo = "Baño y Corte";
+int duracion = 90; // Dato adicional, no está agrupado
+
+// FUNCIÓN SEPARADA de los datos
+void mostrarServicio(String c, String m, String t, int d){
+    System.out.println("Código: " + c);
+    System.out.println("Mascota: " + m);
+    System.out.println("Servicio: " + t);
+    System.out.println("Duración: " + d + " minutos");
+}
+
+// Invocación: Los datos se pasan como argumentos sueltos
+mostrarServicio(codigo, mascota, tipo, duracion);
+```
+
 **Programación orientada a objetos (POO):**
 
 * Se basa en clases y objetos.
@@ -97,149 +145,93 @@ Se identifican **5 objetos principales** dentro del dominio.
 * Permite organizar mejor proyectos grandes y reusabilidad.
 
 
-###  Programación Estructurada
-
-```java
-String codigo = "GROOM-001";
-String mascota = "Lana";
-String tipo = "Baño y corte";
-
-void mostrarServicio(String c, String m, String t){
-    System.out.println(c);
-    System.out.println(m);
-    System.out.println(t);
-}
-
-mostrarServicio(codigo, mascota, tipo);
-```
-
-###  Programación Orientada a Objetos
-
-```java
+```java 
 class GroomingService {
-    String codigo;
-    String mascota;
-    String tipo;
+    double basePrice; // Atributo
 
-    GroomingService(String c, String m, String t){
-        codigo = c;
-        mascota = m;
-        tipo = t;
-    }
+    // Método que opera sobre el atributo
+    public double calculateFinalCost() {
+        final double TAX_RATE = 0.10;
+        return this.basePrice * (1 + // Programación Orientada a Objetos: Clase GroomingService
 
-    void mostrarInfo(){
-        System.out.println(codigo);
-        System.out.println(mascota);
-        System.out.println(tipo);
+        class GroomingService {
+            // ATRIBUTOS (Datos agrupados)
+            String serviceCode;
+            String petName;
+            String serviceType;
+            // La duración podría ser otro atributo aquí
+
+            // CONSTRUCTOR
+            GroomingService(String c, String m, String t){
+                this.serviceCode = c;
+                this.petName = m;
+                this.serviceType = t;
+            }
+
+            // MÉTODO (Lógica agrupada)
+            void mostrarInfo(){
+                System.out.println("=== Servicio Grooming ===");
+                System.out.println("Código: " + this.serviceCode);
+                System.out.println("Mascota: " + this.petName);
+                System.out.println("Servicio: " + this.serviceType);
+            }
+        }
+
+// Creación y uso: El objeto es autónomo
+        GroomingService s1 = new GroomingService("GROOM-001", "Lana", "Baño y Corte");
+        s1.mostrarInfo();TAX_RATE);
     }
 }
-
-GroomingService s1 = new GroomingService("GROOM-001", "Lana", "Baño y corte");
-s1.mostrarInfo();
+// La función (método) está encapsulada con el dato (basePrice).
 ```
+---
+### 4. Ventajas de POO en "Mascotas Elegantes"
+- Modelado Fiel: Permite crear objetos Pet y GroomingService que reflejan directamente la realidad del negocio, haciendo el código más intuitivo.
+
+- Encapsulación: Atributos como el precio (basePrice) o el estado de pago (isPaid) están protegidos, controlando su modificación únicamente a través de métodos (setIsPaid), lo cual es vital para la gestión financiera.
+
+- Extensibilidad: Si el sistema necesita manejar un nuevo tipo de mascota o servicio, simplemente se crea o extiende una clase sin alterar la lógica de las clases existentes.
+
+### Ventajas específicas de mi dominio
+**Peluquería Canina “Mascotas Elegantes”**
+
+- Representación fiel del negocio: Cada mascota o servicio se modela como un objeto de la vida real.
+
+- Menor repetición de código: Se pueden crear varios servicios o mascotas sin lógica duplicada.
+
+- Fácil de extender: Nuevos servicios (spa, masajes, etc.) se agregan fácilmente con nuevas clases o métodos.
+
+- Mejor organización: Los datos de cada servicio y mascota están agrupados dentro de sus clases.
+
+- Mantenimiento sencillo: Si cambia la forma de mostrar o procesar un servicio, se edita en un solo lugar.
 
 ---
 
-## Actividad 3 — Primera Clase Simple
 
-En esta actividad se define una clase llamada GroomingService, la cual representa un servicio de peluquería canina.
-Se incluyen tres atributos principales: código del servicio, nombre de la mascota y tipo de servicio.
-Además, se crea un constructor para inicializar estos datos y un método que permite mostrar la información registrada.
+## 5. Decisiones de Diseño
 
-### `GroomingService.java`
+**¿Por qué elegí estos atributos?** 
+- Los atributos basePrice (double), durationMinutes (int), y isPaid (boolean) fueron seleccionados específicamente para cumplir con los requisitos obligatorios de tipos de datos del ejercicio (numérico decimal/entero y booleano), además de modelar aspectos financieros y operativos reales del servicio de peluquería.
+- El atributo ageYears en Pet permite implementar la lógica funcional isOldPet().
 
-```java
-public class GroomingService {
-    String serviceCode;
-    String petName;
-    String serviceType;
+**¿Qué validaciones implementé?**
 
-    public GroomingService(String serviceCode, String petName, String serviceType) {
-        this.serviceCode = serviceCode;
-        this.petName = petName;
-        this.serviceType = serviceType;
-    }
+- Encapsulación (Getter/Setter): Se implementaron getters (getName, getServiceCode) y setters (setIsPaid) para proteger el acceso directo a los atributos privados y controlar su modificación.
+- Lógica Funcional: El método isOldPet() en Pet introduce una validación lógica que diferencia a las mascotas mayores, y calculateFinalCost() asegura un cálculo uniforme de costos.
 
-    public void showInfo() {
-        System.out.println("=== Servicio Grooming ===");
-        System.out.println("Código: " + serviceCode);
-        System.out.println("Mascota: " + petName);
-        System.out.println("Servicio: " + serviceType);
-        System.out.println("-------------------------");
-    }
-}
-```
+**¿Qué relaciones identifiqué?**
 
-### `Main.java`
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        GroomingService g1 = new GroomingService("GROOM-001", "Lana", "Baño y corte");
-        GroomingService g2 = new GroomingService("GROOM-002", "Princesa", "Deslanado");
-        GroomingService g3 = new GroomingService("GROOM-003", "Ari", "Baño medicado");
-
-        g1.showInfo();
-        g2.showInfo();
-        g3.showInfo();
-    }
-}
-```
+- Se implementó una Asociación (Usa-A). La clase Main actúa como puente, obteniendo el nombre del objeto Pet (p.getName()) para inicializar el objeto GroomingService, ligando así el servicio a la mascota.
 
 ---
 
-## Actividad 4 — Múltiples Objetos
-En esta actividad se reutiliza la clase GroomingService para crear cinco instancias distintas, cada una con información propia relacionada con un servicio real de peluquería canina.
-Posteriormente, se invoca el método correspondiente para mostrar la información de cada servicio en consola.
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        GroomingService g1 = new GroomingService("GROOM-001", "Lana", "Baño y corte");
-        GroomingService g2 = new GroomingService("GROOM-002", "Princesa", "Deslanado");
-        GroomingService g3 = new GroomingService("GROOM-003", "Ari", "Baño medicado");
-        GroomingService g4 = new GroomingService("GROOM-004", "Mora", "Spa completo");
-        GroomingService g5 = new GroomingService("GROOM-005", "Leo", "Corte según raza");
-
-        g1.showInfo();
-        g2.showInfo();
-        g3.showInfo();
-        g4.showInfo();
-        g5.showInfo();
-    }
-}
-```
----
-
-## Decisiones de Diseño
-
-- **¿Por qué elegí estos atributos?**
-    - Elegí `serviceCode`, `petName` y `serviceType` para la clase `GroomingService` porque representan la información mínima necesaria para identificar y diferenciar un servicio dentro de la peluquería.
-    - `serviceCode` permite distinguir cada servicio.
-    - `petName` lo asocia con su dueño y facilita el seguimiento de la mascota.
-    - `serviceType` describe la atención que recibirá la mascota y permite organizar los servicios ofrecidos.
-
-
-- **¿Qué validaciones implementé?**
-    - `serviceCode` debería ser único para evitar duplicados.
-    - `petName` no debe estar vacío para que el registro sea válido.
-    - `serviceType` debe corresponder a los servicios reales ofrecidos por la peluquería, como baño, corte, spa, deslanado, etc.
-
-
-- **¿Qué relaciones identifiqué?**
-    - Cada `GroomingService` se relaciona con una `Mascota`.
-    - Una `Mascota` pertenece a un `Dueño` y puede tener múltiples servicios.
-    - Futuramente, se podría relacionar un `GroomingService` con un `Peluquero` que realiza el servicio y con los `Accesorios` o productos utilizados.
-
----
-
-##  Dificultades Encontradas
+## 6. Dificultades Encontradas
 - Al principio, fue un poco difícil organizar la estructura de las clases y decidir qué atributos y métodos correspondían a cada objeto.
-- Inicialmente olvidé crear un método para mostrar la información de los servicios, lo que dificultaba verificar los datos en consola.
-- Al crear varias instancias, algunos códigos de servicio se duplicaron por error, lo que mostró la importancia de usar identificadores únicos.
-- Alinear los servicios con los ofrecidos realmente por la peluquería requirió revisar que los nombres y tipos fueran coherentes.
-
+- La dificultad principal fue resolver el error de compilación inicial (Cannot resolve method y private access) al intentar usar el objeto Pet dentro de Main.java para crear GroomingService.
+- Inicialmente, no se pudo acceder al name de la mascota (p1.name) desde la clase Main para pasarlo al constructor de GroomingService debido a que el atributo name es privado.
+- Al aumentar los atributos a 5 o más en GroomingService, resultó un desafío manejar la lista de 5 argumentos en el constructor y asegurar que cada uno se inicializara correctamente usando la palabra clave this. para diferenciar entre el argumento y el atributo
 ---
+
 
 
 
