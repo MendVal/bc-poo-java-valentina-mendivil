@@ -1,19 +1,19 @@
 package co.edu.sena.GroomingService.sem1;
 
 /**
- * Clase secundaria que modela una Mascota (Pet) dentro del sistema de peluquería canina.
+ * Clase secundaria que modela una Mascota dentro del sistema de peluquería canina.
  * Contiene atributos básicos, comportamiento y validaciones simples.
  */
 public class Pet {
 
-    // Atributos (propiedades de la mascota)
-    private String name;                 // Nombre de la mascota
-    private String breed;                // Raza
-    private String ownerName;            // Nombre del dueño
-    private int ageYears;                // Edad en años
-    private boolean requiresSpecialCare; // Indica si necesita cuidado especial
+    // Atributos 
+    private String name;                 
+    private String breed;               
+    private String ownerName;            
+    private int ageYears;                
+    private boolean requiresSpecialCare; 
 
-    // Constructor (inicializa los atributos)
+    // Constructor
     public Pet(String name, String breed, String ownerName, int ageYears) {
         this.name = name;
         this.breed = breed;
