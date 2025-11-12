@@ -7,12 +7,12 @@ package co.edu.sena.GroomingService.sem1;
 public class GroomingService {
 
     // Atributos (propiedades del servicio)
-    private String serviceCode;     // Código único del servicio
-    private String petName;         // Nombre de la mascota asociada
-    private String serviceType;     // Tipo de servicio (baño, corte, spa, etc.)
-    private double basePrice;       // Precio base
-    private int durationMinutes;    // Duración estimada del servicio
-    private boolean isPaid;         // Estado de pago (true = pagado)
+    private String serviceCode;     
+    private String petName;         
+    private String serviceType;     
+    private double basePrice;       
+    private int durationMinutes;    
+    private boolean isPaid;         
 
     // Constructor (inicializa todos los atributos)
     public GroomingService(String serviceCode, String petName, String serviceType, double basePrice, int durationMinutes) {
