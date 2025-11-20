@@ -64,8 +64,6 @@ public class GroomingService {
     }
 
 } // Fin de la clase
-
-
 /*
  * Clase GroomingService (Servicio de Peluquería Canina):
  * Representa un servicio específico realizado a una mascota.
