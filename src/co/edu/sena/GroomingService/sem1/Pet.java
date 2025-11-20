@@ -22,9 +22,19 @@ public class Pet {
         this.requiresSpecialCare = false; // Por defecto, no requiere cuidado especial
     }
 
-    // Getter (permite acceder al nombre desde otras clases)
+    // Getter: permite acceder al nombre desde otras clases
     public String getName() {
         return name;
+    }
+
+    // Getter: permite obtener la raza
+    public String getBreed() {
+        return breed;
+    }
+
+    // Getter: permite obtener el nombre del dueño
+    public String getOwnerName() {
+        return ownerName;
     }
 
     // Método 1: muestra toda la información de la mascota

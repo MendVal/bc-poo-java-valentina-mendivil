@@ -6,7 +6,7 @@ package co.edu.sena.GroomingService.sem1;
  */
 public class GroomingService {
 
-    // Atributos (propiedades del servicio)
+    // Atributos
     private String serviceCode;     // Código único del servicio
     private String petName;         // Nombre de la mascota asociada
     private String serviceType;     // Tipo de servicio (baño, corte, spa, etc.)
@@ -14,17 +14,17 @@ public class GroomingService {
     private int durationMinutes;    // Duración estimada del servicio
     private boolean isPaid;         // Estado de pago (true = pagado)
 
-    // Constructor (inicializa todos los atributos)
+    // Constructor
     public GroomingService(String serviceCode, String petName, String serviceType, double basePrice, int durationMinutes) {
         this.serviceCode = serviceCode;
         this.petName = petName;
         this.serviceType = serviceType;
         this.basePrice = basePrice;
         this.durationMinutes = durationMinutes;
-        this.isPaid = false; // Por defecto, el servicio inicia como no pagado
+        this.isPaid = false; // Por defecto, inicia como no pagado
     }
 
-    // Método 1: muestra la información completa del servicio
+    // Método: mostrar información del servicio
     public void showInfo() {
         System.out.println("=== Servicio Grooming (" + serviceCode + ") ===");
         System.out.println("Mascota: " + petName);
@@ -35,27 +35,41 @@ public class GroomingService {
         System.out.println("-----------------------------------------");
     }
 
-    // Método 2: calcula el costo final del servicio con tasa del 10%
+    // Método: calcular costo final
     public double calculateFinalCost() {
         final double SERVICE_FEE = 0.10;
         return basePrice * (1 + SERVICE_FEE);
     }
 
-    // Método 3: obtiene el código del servicio (getter)
+    // Getter del código del servicio
     public String getServiceCode() {
         return serviceCode;
     }
 
-    // Método 4: cambia el estado de pago (setter)
+    // Setter estado de pago
     public void setIsPaid(boolean paid) {
         this.isPaid = paid;
     }
-}// Fin de la clase GrommingService
+
+    // ================================
+    // MÉTODOS NECESARIOS PARA SEMANA 2
+    // ================================
+
+    public int getDurationMinutes() {
+        return durationMinutes;
+    }
+
+    public String getServiceType() {
+        return serviceType;
+    }
+
+} // Fin de la clase
 
 
 /*
-Clase Principal GroomingService (Servicio de Peluquería):
-Representa un servicio específico ofrecido a una mascota.
-Contiene atributos como código de servicio, precio y duración, y métodos
-para calcular el costo final y actualizar el estado de pago.
-*/
+ * Clase GroomingService (Servicio de Peluquería Canina):
+ * Representa un servicio específico realizado a una mascota.
+ * Incluye atributos como código del servicio, tipo, precio y duración.
+ * Proporciona métodos para calcular el costo final, consultar información
+ * y actualizar el estado de pago del servicio.
+ */
