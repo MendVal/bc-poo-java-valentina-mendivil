@@ -1,6 +1,6 @@
 package co.edu.sena.GroomingService.sem1;
 
-/**
+/*
  * Clase principal que representa un Servicio de Peluquería Canina (GroomingService).
  * Relaciona una mascota con el tipo de servicio, su costo y estado de pago.
  */
