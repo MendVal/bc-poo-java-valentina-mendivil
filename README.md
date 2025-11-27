@@ -33,4 +33,4 @@ java Main
 |   01   | ✅ Completada |
 |   02   | ✅ Completada |
 |   03  | ✅ Completada |
-|   04   | 🔄 En progreso |
+|   04   | ✅  En progreso |
