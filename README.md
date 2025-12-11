@@ -30,8 +30,9 @@ java Main
 
 | Semana | Estado      |
 |--------|-------------|
-|   01   | ✅ Completada |
-|   02   | ✅ Completada |
-|   03  | ✅ Completada |
-|   04   | ✅ Completada |
-|   05   | En progreso |
+| 01     | ✅ Completada |
+| 02     | ✅ Completada |
+| 03     | ✅ Completada |
+| 04     | ✅ Completada |
+| 05     | ✅ Completada |
+| 06     | En progreso |
