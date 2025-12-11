@@ -19,7 +19,7 @@ public class ServicePackage {
     public ServicePackage(String packageCode, String packageName) {
         this.packageCode = packageCode;
         this.packageName = packageName;
-        this.services = new ArrayList<>(); // Lista lista para recibir servicios
+        this.services = new ArrayList<>(); // Lista listapara recibir servicios
     }
 
     // Agrega un servicio al paquete validando que no sea nulo
