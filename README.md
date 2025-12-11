@@ -19,20 +19,19 @@
 
 ## 🚀 Cómo Ejecutar
 
-### Semana 01
+
 ```bash
-cd semana-01/src
 javac *.java
 java Main
 ```
 
 ## 📝 Progreso
 
-| Semana | Estado      |
-|--------|-------------|
+| Semana | Estado       |
+|--------|--------------|
 | 01     | ✅ Completada |
 | 02     | ✅ Completada |
 | 03     | ✅ Completada |
 | 04     | ✅ Completada |
 | 05     | ✅ Completada |
-| 06     | En progreso |
+| 06     |  En progreso |
