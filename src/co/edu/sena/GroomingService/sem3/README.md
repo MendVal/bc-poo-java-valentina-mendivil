@@ -1,8 +1,14 @@
 # Semana 03 - Programación Orientada a Objetos (POO)
 
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
+---
 ## Descripción
 
-El Dominio de gestión de peluquería fue refactorizado para implementar los siguientes principios de POO:
+El Dominio de gestión de peluquería canina fue refactorizado para implementar los siguientes principios de POO:
 
 1.  **Encapsulación:** Todos los atributos de las clases son privados (`private`).
 2.  **Sobrecarga:** Se añadieron múltiples constructores para crear objetos con diferentes conjuntos de datos.

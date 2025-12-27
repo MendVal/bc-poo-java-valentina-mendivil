@@ -1,5 +1,12 @@
 # Semana 02 - Programación Orientada a Objetos (POO)
 
+
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
+
 ## Descripción
 
 Esta semana el sistema fue expandido para gestionar colecciones de objetos y establecer **relaciones de asociación** y **dependencia** entre clases. Se implementaron tres clases nuevas (`Owner`, `ServicePackage`, `GroomingManager`) reutilizando los objetos base (`Pet` y `GroomingService`) de la Semana 01.

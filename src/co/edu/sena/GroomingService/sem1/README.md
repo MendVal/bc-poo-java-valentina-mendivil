@@ -1,5 +1,12 @@
 # Semana 01 - Programación Orientada a Objetos (POO)
 
+# Semana 08: Colecciones y Generics – Grooming Service
+
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
 ## Descripción
 
 Esta semana se trabajó en la introducción a la POO. Se identificaron objetos del dominio "Peluquería Canina Mascotas Elegantes", se compararon paradigmas de programación estructurada y orientada a objetos, y se implementó la primera clase `GroomingService` con múltiples instancias en Java.

@@ -1,5 +1,12 @@
 #  Semana 05 - Programación Orientada a Objetos (POO): Polimorfismo
 
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
+---
+
 ## Descripción
 
 Esta semana se profundizó en la Programación Orientada a Objetos implementando las tres formas principales de **Polimorfismo**: Sobrescritura (Overriding), Sobrecarga (Overloading) y Polimorfismo Dinámico. Se migró la clase padre `Pet` a una clase abstracta para establecer un contrato de comportamiento obligatorio, extendiendo la funcionalidad de la clase `GroomingService`.

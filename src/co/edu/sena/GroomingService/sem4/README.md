@@ -1,5 +1,11 @@
 #  Semana 04 - Programación Orientada a Objetos (POO): Herencia
 
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
+---
 ## Descripción
 
 El Dominio de gestión de peluquería fue refactorizado para implementar los siguientes principios de POO:

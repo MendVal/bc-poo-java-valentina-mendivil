@@ -1,5 +1,14 @@
 # Semana 06: Abstracción e Interfaces
 
+##  Información del Estudiante
+- **Nombre**: Valentina Mendivil
+- **Ficha**: *3228973A*
+- **Dominio**: Mascotas Elegantes
+
+## Descripción del Sistema
+Mascotas Elegantes es una peluquería especializada en el cuidado estético de perros y gatos. Ofrece baño medicado, corte según raza, limpieza de oídos y dientes, corte de uñas, arreglo de pelaje, deslanado, spa con masajes y aromaterapia. Cuenta con 3 peluqueros certificados, 2 mesas de grooming profesional, zona de secado con equipos especializados, productos hipoalergénicos y tienda de accesorios. Atiende 180 mascotas mensuales.
+
+
 ## Clases Abstractas Implementadas
 
 ### Pet
