@@ -3,7 +3,7 @@
 ##  Información del Estudiante
 - **Nombre**: Valentina Mendivil Correa
 - **Ficha**: 3228973A
-- **Dominio**: Grooming Service
+- **Dominio**: Mascotas Elegantes
 - **Fecha**: 27/09/2025
 
 ##  Descripción del Proyecto
