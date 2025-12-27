@@ -15,7 +15,8 @@
 - `semana-04/`: Herencia
 - `semana-05/`: Polimorfismo
 - `semana-06/`: Abstracción e Interfaces
-  
+- `Semana-07/`: Manejo de Paquetes y Excepciones
+- `Semana-08/`: Colecciones y Programación Genérica
 
 ## 🚀 Cómo Ejecutar
 
@@ -35,3 +36,5 @@ java Main
 | 04     | ✅ Completada |
 | 05     | ✅ Completada |
 | 06     | ✅ Completada|
+| 07     | ✅ Completada|
+| 08     | ✅ Completada|
