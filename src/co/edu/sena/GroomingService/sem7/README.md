@@ -4,7 +4,7 @@
 - **Nombre**: Valentina Mendivil Correa
 - **Ficha**: 3228973A
 - **Dominio**: Mascotas Elegantes
-- **Fecha**: 27/09/2025
+- **Fecha**: 27/11/2025
 
 ##  Descripción del Proyecto
 
