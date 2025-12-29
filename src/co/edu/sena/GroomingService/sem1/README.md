@@ -1,7 +1,5 @@
 # Semana 01 - Programación Orientada a Objetos (POO)
 
-# Semana 08: Colecciones y Generics – Grooming Service
-
 ##  Información del Estudiante
 - **Nombre**: Valentina Mendivil
 - **Ficha**: *3228973A*
